@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 45px;
+  background-color: hsla(240, 83%, 44%, 0.514);
+}
+
+.search-form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.search-form-input {
+}
+
+.search-form-btn {
+  margin-left: 10px;
+  cursor: pointer;
+}

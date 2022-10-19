@@ -1,1 +1,24 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  padding-top: 15px;
+  padding-bottom: 120px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 1230px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

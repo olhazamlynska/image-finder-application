@@ -84,6 +84,7 @@ const handleSubmit = async event => {
       const target = document.querySelector('.gallery a:last-child');
       observer.observe(target);
     }
+
     modalGallery.refresh();
     scrollPage();
   } catch (error) {
