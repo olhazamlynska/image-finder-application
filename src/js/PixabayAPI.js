@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://pixabay.com/api';
-const KEY_API = '30707124-090c2c800eff03e7656171a71';
+axios.defaults.baseURL = 'https://pixabay.com/api/';
+const API_KEY = '30707124-090c2c800eff03e7656171a71';
 
-export class PixabayAPI {
+export class pixabayAPI {
   #page = 1;
-  #per_Page = 40;
-  #searchQ = '';
+  #perPage = 40;
+  #query = '';
   #totalPages = 0;
   #params = {
     params: {
@@ -17,11 +17,29 @@ export class PixabayAPI {
     },
   };
   async getPhotos() {
-    const response = await axios.get(
-      `?key=${KEY_API}&q=${this.#searchQ}&page=${this.#page}`,
-      this.#params
-    );
+    const urlAXIOS = `?key=${API_KEY}&q=${this.#query}&page=${
+      this.#page
+    }&per_page=${this.#perPage}`;
+    const { data } = await axios.get(urlAXIOS, this.#params);
+    return data;
+  }
 
-    return await response.json();
+  incrementPage() {
+    this.#page += 1;
+  }
+  resetPage() {
+    this.#page = 1;
+  }
+  set query(newQuery) {
+    this.#query = newQuery;
+  }
+  get query() {
+    this.#query;
+  }
+  calculateTotalPages(total) {
+    this.#totalPages = Math.ceil(total / this.#perPage);
+  }
+  get isShowLoadMore() {
+    return this.#page < this.#totalPages;
   }
 }
