@@ -36,7 +36,6 @@ let callback = async function (entries, observer) {
             "We're sorry, but you've reached the end of search results."
           );
         modalGallery.refresh();
-        scrollPage();
       } catch (error) {
         Notify.failure(error.message, 'Something went wrong!');
         clearPage();
@@ -91,7 +90,6 @@ const handleSubmit = async event => {
     }
 
     modalGallery.refresh();
-    scrollPage();
   } catch (error) {
     Notify.failure(error.message, 'Something went wrong!');
     clearPage();
@@ -113,7 +111,6 @@ const onLoadMore = async () => {
     refs.gallery.insertAdjacentHTML('beforeend', markup);
 
     modalGallery.refresh();
-    scrollPage();
   } catch (error) {
     Notify.failure(error.message, 'Something went wrong!');
     clearPage();
@@ -133,13 +130,13 @@ const modalGallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-function scrollPage() {
-  const { height: cardHeight } = document
-    .querySelector('.gallery')
-    .firstElementChild.getBoundingClientRect();
+// function scrollPage() {
+//   const { height: cardHeight } = document
+//     .querySelector('.gallery')
+//     .firstElementChild.getBoundingClientRect();
 
-  window.scrollBy({
-    top: cardHeight * 2,
-    behavior: 'smooth',
-  });
-}
+//   window.scrollBy({
+//     top: cardHeight * 2,
+//     behavior: 'smooth',
+//   });
+// }
