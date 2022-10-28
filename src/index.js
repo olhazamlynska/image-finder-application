@@ -5,9 +5,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { createMarkup } from './js/createMarkup';
 import { pixabayAPI } from './js/PixabayAPI';
 import { refs } from './js/refs';
+import { spinnerPlay, spinnerStop } from './js/spinner';
 
 refs.btnLoadMore.classList.add('is-hidden');
-
 const pixaby = new pixabayAPI();
 
 let options = {
@@ -23,6 +23,7 @@ let callback = async function (entries, observer) {
       observer.unobserve(entry.target);
 
       try {
+        spinnerPlay();
         const { hits } = await pixaby.getPhotos();
         const markup = createMarkup(hits).join('');
         refs.gallery.insertAdjacentHTML('beforeend', markup);
@@ -39,6 +40,8 @@ let callback = async function (entries, observer) {
       } catch (error) {
         Notify.failure(error.message, 'Something went wrong!');
         clearPage();
+      } finally {
+        spinnerStop();
       }
     }
   });
@@ -56,6 +59,7 @@ const handleSubmit = async event => {
   const searchquery = searchQuery.value.trim().toLowerCase();
 
   if (!searchquery) {
+    clearPage();
     Notify.info('Enter data to search!');
     return;
   }
@@ -65,6 +69,7 @@ const handleSubmit = async event => {
   clearPage();
 
   try {
+    spinnerPlay();
     const { hits, total } = await pixaby.getPhotos();
 
     if (hits.length === 0) {
@@ -90,6 +95,8 @@ const handleSubmit = async event => {
   } catch (error) {
     Notify.failure(error.message, 'Something went wrong!');
     clearPage();
+  } finally {
+    spinnerStop();
   }
 };
 
