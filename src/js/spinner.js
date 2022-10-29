@@ -33,21 +33,8 @@ import { Spinner } from 'spin.js';
 //   spinner.stop();
 // }
 
-// window.onload = function () {
-//   refs.body.classList.add('loaded_hiding');
-//   window.setTimeout(function () {
-//     refs.body.classList.add('loaded');
-//     refs.body.classList.remove('loaded_hiding');
-//   }, 500);
-// };
-
-// export function spinnerPlay() {
-//   refs.body.classList.add('loaded_hiding');
-// }
-// export function spinnerStop() {
-//   refs.body.classList.add('loaded');
-//   refs.body.classList.remove('loaded_hiding');
-// }
+///////////////////
+// spiner svg
 
 export function spinnerPlay() {
   refs.body.classList.add('loading');
