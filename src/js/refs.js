@@ -7,4 +7,5 @@ export const refs = {
   spinner: document.querySelector('.js-spinner'),
   body: document.querySelector('body'),
   toTopBtn: document.getElementById('to-top-btn'),
+  btnUp: document.querySelector('.btn-up'),
 };

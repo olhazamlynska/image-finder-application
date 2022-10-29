@@ -159,11 +159,11 @@ window.addEventListener('scroll', function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    refs.toTopBtn.style.display = 'block';
+    refs.btnUp.style.display = 'block';
   } else {
-    refs.toTopBtn.style.display = 'none';
+    refs.btnUp.style.display = 'none';
   }
 }
-refs.toTopBtn.addEventListener('click', event => {
+refs.btnUp.addEventListener('click', event => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
