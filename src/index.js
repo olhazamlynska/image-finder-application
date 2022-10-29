@@ -5,9 +5,17 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { createMarkup } from './js/createMarkup';
 import { pixabayAPI } from './js/PixabayAPI';
 import { refs } from './js/refs';
-import { spinnerPlay, spinnerStop, loader } from './js/spinner';
+import { spinnerPlay, spinnerStop } from './js/spinner';
+
+spinnerPlay();
+
+window.addEventListener('load', function (event) {
+  console.log('All resources finished loading!');
+  spinnerStop();
+});
 
 // refs.btnLoadMore.classList.add('is-hidden');
+
 const pixaby = new pixabayAPI();
 
 let options = {
