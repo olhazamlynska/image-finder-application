@@ -11,6 +11,7 @@ spinnerPlay();
 
 window.addEventListener('load', function (event) {
   console.log('All resources finished loading!');
+
   spinnerStop();
 });
 
@@ -150,3 +151,19 @@ function scrollPage() {
     behavior: 'smooth',
   });
 }
+///////Button smooth scroll up
+
+window.addEventListener('scroll', function () {
+  scrollFunction();
+});
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    refs.toTopBtn.style.display = 'block';
+  } else {
+    refs.toTopBtn.style.display = 'none';
+  }
+}
+refs.toTopBtn.addEventListener('click', event => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

@@ -57,3 +57,29 @@ a {
   visibility: hidden;
   pointer-events: none;
 }
+////Button smooth scroll up
+///
+#to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+
+  background-image: url(../images/icons8-clapperboard-32.ico);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+#to-top-btn:hover {
+  background-color: #555;
+}

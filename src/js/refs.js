@@ -6,4 +6,5 @@ export const refs = {
   backdrop: document.querySelector('.backdrop'),
   spinner: document.querySelector('.js-spinner'),
   body: document.querySelector('body'),
+  toTopBtn: document.getElementById('to-top-btn'),
 };
