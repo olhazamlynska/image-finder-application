@@ -91,7 +91,6 @@ const handleSubmit = async event => {
     refs.gallery.insertAdjacentHTML('beforeend', markup);
     pixaby.calculateTotalPages(total);
     Notify.success(`Hooray! We found ${total} images.`);
-    observer.observe(refs.sentinel);
 
     if (pixaby.isShowLoadMore) {
       // refs.btnLoadMore.classList.remove('is-hidden');
