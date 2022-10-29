@@ -1,5 +1,5 @@
-// import { refs } from './refs';
-// import { Spinner } from 'spin.js';
+import { refs } from './refs';
+import { Spinner } from 'spin.js';
 
 // const opts = {
 //   lines: 13, // The number of lines to draw
@@ -27,7 +27,35 @@
 //   spinner.spin(refs.spinner);
 //   refs.backdrop.classList.remove('is-hidden');
 // }
+
 // export function spinnerStop() {
 //   refs.backdrop.classList.add('is-hidden');
 //   spinner.stop();
 // }
+
+// window.onload = function () {
+//   refs.body.classList.add('loaded_hiding');
+//   window.setTimeout(function () {
+//     refs.body.classList.add('loaded');
+//     refs.body.classList.remove('loaded_hiding');
+//   }, 500);
+// };
+
+// export function spinnerPlay() {
+//   refs.body.classList.add('loaded_hiding');
+// }
+// export function spinnerStop() {
+//   refs.body.classList.add('loaded');
+//   refs.body.classList.remove('loaded_hiding');
+// }
+
+export function spinnerPlay() {
+  refs.body.classList.add('loading');
+}
+
+export function spinnerStop() {
+  window.setTimeout(function () {
+    refs.body.classList.remove('loading');
+    refs.body.classList.add('loaded');
+  }, 500);
+}

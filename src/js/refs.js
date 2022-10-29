@@ -5,4 +5,5 @@ export const refs = {
   sentinel: document.querySelector('.js-sentinel'),
   backdrop: document.querySelector('.backdrop'),
   spinner: document.querySelector('.js-spinner'),
+  body: document.querySelector('body'),
 };

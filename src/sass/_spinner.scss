@@ -1,3 +1,5 @@
+/// spin/js
+///
 // @keyframes spinner-line-fade-more {
 //   0%,
 //   100% {
@@ -43,32 +45,30 @@
 //   }
 // }
 
-///////////////////////
-/// svg
+///
+/// svg spinner
 ///
 .preloader {
   position: fixed;
   left: 0;
   top: 0;
+  display: none;
   right: 0;
   bottom: 0;
   overflow: hidden;
   /* фоновый цвет */
-  background: #e0e0e0;
+  background: #33403e55;
   z-index: 1001;
 }
 
 .preloader__image {
   position: relative;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  margin-left: -35px;
+  width: 150px;
+  height: 150px;
+  margin: auto;
   text-align: center;
   animation: preloader-rotate 2s infinite linear;
-  fill: red;
+  fill: hsl(240, 83%, 44%);
 }
 
 @keyframes preloader-rotate {
@@ -86,35 +86,6 @@
   display: none;
 }
 
-////////////////////////////
-///gif
-// .preloader {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   overflow: hidden;
-//   background: #fff;
-//   z-index: 1001;
-// }
-
-// .preloader__image {
-//   // position: relative;
-//   // top: 50%;
-//   // left: 50%;
-//   width: 100%;
-//   height: 100%;
-//   margin-top: -32px;
-//   margin-left: -32px;
-//   background: url('../images/popcorn.gif') no-repeat 50% 50%; /*расположение (url) изображения gif и др. параметры*/
-// }
-
-// .loaded_hiding .preloader {
-//   transition: 0.3s opacity;
-//   opacity: 0;
-// }
-
-// .loaded .preloader {
-//   display: none;
-// }
+.loading .preloader {
+  display: flex;
+}

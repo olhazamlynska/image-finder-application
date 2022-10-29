@@ -7,7 +7,7 @@ import { pixabayAPI } from './js/PixabayAPI';
 import { refs } from './js/refs';
 import { spinnerPlay, spinnerStop, loader } from './js/spinner';
 
-refs.btnLoadMore.classList.add('is-hidden');
+// refs.btnLoadMore.classList.add('is-hidden');
 const pixaby = new pixabayAPI();
 
 let options = {
@@ -23,8 +23,7 @@ let callback = async function (entries, observer) {
       observer.unobserve(entry.target);
 
       try {
-        // spinnerPlay();
-        loader();
+        spinnerPlay();
         const { hits } = await pixaby.getPhotos();
         const markup = createMarkup(hits).join('');
         refs.gallery.insertAdjacentHTML('beforeend', markup);
@@ -70,7 +69,7 @@ const handleSubmit = async event => {
   clearPage();
 
   try {
-    // spinnerPlay();
+    spinnerPlay();
     const { hits, total } = await pixaby.getPhotos();
 
     if (hits.length === 0) {
@@ -97,7 +96,7 @@ const handleSubmit = async event => {
     Notify.failure(error.message, 'Something went wrong!');
     clearPage();
   } finally {
-    // spinnerStop();
+    spinnerStop();
   }
 };
 
