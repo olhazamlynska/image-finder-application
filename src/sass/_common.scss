@@ -109,7 +109,7 @@ a {
 ////Button smooth scroll up
 ///
 ///
-.btn-up-wrapper {
+.btn-up {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -121,7 +121,7 @@ a {
   color: red;
 }
 
-.btn-up-wrapper__text {
+.btn-up-text {
   font-family: inherit;
   font-size: 20px;
   font-weight: bold;
@@ -141,6 +141,6 @@ a {
   width: 96px;
   height: 79px;
 }
-.btn-up-wrapper:hover {
+.btn-up:hover {
   color: blue;
 }
