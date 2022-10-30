@@ -17,23 +17,72 @@ a {
   color: black;
 }
 
+// .container {
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-left: 20px;
+//   padding-right: 20px;
+
+//   // @include mobile {
+//   //   width: 320px;
+//   // }
+
+//   @media screen and (min-width: 480px) {
+//     width: 480px;
+//   }
+//   @include tablet {
+//     width: 768px;
+//   }
+//   @include desktop {
+//     max-width: 1280px;
+//   }
+// }
+
+////container fimoteca
+///
 .container {
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 
-  // @include mobile {
-  //   width: 320px;
-  // }
+  @media screen and (min-width: 480px) {
+    max-width: 550px;
+  }
+
+  @include tablet {
+    max-width: 1024px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop {
+    width: 100%;
+    max-width: 1280px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (min-width: 480px) {
+    // max-width: 550px;
     width: 480px;
   }
+
   @include tablet {
     width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
   }
   @include desktop {
+    width: 100%;
     max-width: 1280px;
   }
 }
@@ -60,7 +109,7 @@ a {
 ////Button smooth scroll up
 ///
 ///
-.btn-up {
+.btn-up-wrapper {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -71,13 +120,16 @@ a {
   height: 100px;
   color: red;
 }
-.btn-up-text {
+.btn-up-wrapper:hover {
+  color: blue;
+}
+.btn-up-wrapper__text {
   font-family: inherit;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
-#to-top-btn {
+.btn-up-wrapper__btn {
   outline: none;
   border: none;
   background-color: transparent;
@@ -90,8 +142,4 @@ a {
   background-size: cover;
   width: 96px;
   height: 79px;
-}
-
-.btn-up:hover {
-  color: blue;
 }

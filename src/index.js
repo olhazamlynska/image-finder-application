@@ -153,9 +153,7 @@ function scrollPage() {
 }
 ///////Button smooth scroll up
 
-window.addEventListener('scroll', function () {
-  scrollFunction();
-});
+window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
