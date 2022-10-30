@@ -157,9 +157,9 @@ window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    refs.btnUp.style.display = 'block';
+    refs.btnUpWrapper.style.display = 'block';
   } else {
-    refs.btnUp.style.display = 'none';
+    refs.btnUpWrapper.style.display = 'none';
   }
 }
 refs.btnUp.addEventListener('click', event => {

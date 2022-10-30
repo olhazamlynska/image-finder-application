@@ -6,6 +6,6 @@ export const refs = {
   backdrop: document.querySelector('.backdrop'),
   spinner: document.querySelector('.js-spinner'),
   body: document.querySelector('body'),
-  toTopBtn: document.getElementById('.btn-up-wrapper__btn'),
-  btnUp: document.querySelector('.btn-up-wrapper'),
+  btnUp: document.getElementById('.btn-up-wrapper__btn'),
+  btnUpWrapper: document.querySelector('.btn-up-wrapper'),
 };

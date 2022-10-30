@@ -120,9 +120,7 @@ a {
   height: 100px;
   color: red;
 }
-.btn-up-wrapper:hover {
-  color: blue;
-}
+
 .btn-up-wrapper__text {
   font-family: inherit;
   font-size: 20px;
@@ -142,4 +140,7 @@ a {
   background-size: cover;
   width: 96px;
   height: 79px;
+}
+.btn-up-wrapper:hover {
+  color: blue;
 }
