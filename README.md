@@ -1,101 +1,107 @@
-**Read in other languages: [Русский](README.md), [Polski](README.pl.md).**
+<a name="readme-top"></a>
 
-# Parcel template
+<div align="center">
+  <h3><b>Image Finder Application</b></h3>
+</div>
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
+<!-- TABLE OF CONTENTS -->
 
-## Подготовка нового проекта
+# 📗 Table of Contents
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Склонируй этот репозиторий.
-3. Измени имя папки с `parcel-project-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи зависимости проекта в терминале командой `npm install` .
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🙏 Contact Information](#contact-information)
 
-## Файлы и папки
+<!-- PROJECT DESCRIPTION -->
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  файлы стилей страниц. Например, для `index.html` файл стилей называется
-  `index.scss`.
-- Изображения добавляй в папку `src/images`. Сборщик оптимизирует их, но только
-  при деплое продакшн версии проекта. Все это происходит в облаке, чтобы не
-  нагружать твой компьютер, так как на слабых машинах это может занять много
-  времени.
+# 📖 Image Finder Application <a name="about-project"></a>
 
-## Деплой
+**Image Finder Application** is a simple image finder application, where you can
+search images by your search data.
 
-Для настройки деплоя проекта необходимо выполнить несколько дополнительных шагов
-по настройке твоего репозитория. Зайди во вкладку `Settings` и в подсекции
-`Actions` выбери выбери пункт `General`.
+## 🛠 Built With <a name="built-with"></a>
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+### Tech Stack <a name="tech-stack"></a>
 
-Пролистай страницу до последней секции, в которой убедись что выбраны опции как
-на следующем изображении и нажми `Save`. Без этих настроек у сборки будет
-недостаточно прав для автоматизации процесса деплоя.
+  <P>Technologies</P>
+  <ul>
+    <li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
+    <li><a href="https://ru.wikipedia.org/wiki/CSS">CSS</a></li>
+    <li><a href="http://sass-lang.com/">SASS</a></li>
+    <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">JS</a></li>
+    <li><a href="https://axios-http.com/">Axios</a></li>
+    <li><a href="https://spin.js.org/">Spin.js</a></li>
+    <li><a href="https://pixabay.com/service/about/api/"> Backend: Pixabay Developer API</a></li>
+  </ul>
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+<!-- Features -->
 
-Продакшн версия проекта будет автоматически собираться и деплоиться на GitHub
-Pages, в ветку `gh-pages`, каждый раз когда обновляется ветка `main`. Например,
-после прямого пуша или принятого пул-реквеста. Для этого необходимо в файле
-`package.json` отредактировать поле `homepage` и скрипт `build`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+### Key Features <a name="key-features"></a>
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
+- **Fetches images by search data from the Pixabay API **
+- **List images in gallery**
+- **Opens a modal to look full sized image**
+- **Shows a loader during searching**
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![GitHub Pages settings](./assets/repo-settings.png)
+<!-- LIVE DEMO -->
 
-### Статус деплоя
+## 🚀 Live Demo <a name="live-demo"></a>
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+- [Live Demo Link](https://olhazamlynska.github.io/image-finder-application/)
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+<!-- GETTING STARTED -->
 
-![Deployment status](./assets/status.png)
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Живая страница
+### Setup
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
+Clone this repository to your desired folder:
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` или скрипта `build` в
-файле `package.json`.
+- [ ] Navigate to the directory where you want to download the project.
+- [ ] Or open a terminal in this directory and run the command
+      `git clone https://github.com/olhazamlynska/image-finder-application/`
 
-## Как это работает
+### Install
 
-![How it works](./assets/how-it-works.png)
+Change into the projectdirectory: `cd image-finder`, then:
 
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+- [ ] Install the dependencies: `npm install`
+
+### Usage
+
+To run the project, execute the following command:
+
+- [ ] Start the development server: `npm start`
+- [ ] Open your browser and visit `http://localhost:1234` to view the
+      application.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Olya Zamlynska**
+
+- Email: [olyazamlynska@gmail.com](mailto:olyazamlynska@gmail.com)
+- GitHub: [@olhazamlynska](https://github.com/olhazamlynska)
+- Twitter: [@olyazamlynska](https://twitter.com/olyazamlynska)
+- LinkedIn: [OlhaZamlynska](https://www.linkedin.com/in/olhazamlynska)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact Information <a name="contact-information"></a>
+
+If you have any questions or feedback, please feel free to contact me.
