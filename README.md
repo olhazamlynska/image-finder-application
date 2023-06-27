@@ -31,7 +31,7 @@ search images by your search data.
 
 ### Tech Stack <a name="tech-stack"></a>
 
-  <P>Technologies</P>
+  <p>Technologies</p>
   <ul>
     <li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
     <li><a href="https://ru.wikipedia.org/wiki/CSS">CSS</a></li>
