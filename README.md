@@ -46,7 +46,7 @@ search images by your search data.
 
 ### Key Features <a name="key-features"></a>
 
-- **Fetches images by search data from the Pixabay API **
+- **Fetches images by searching data from the Pixabay API**
 - **List images in gallery**
 - **Opens a modal to look full sized image**
 - **Shows a loader during searching**
