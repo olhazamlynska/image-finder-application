@@ -17,29 +17,6 @@ a {
   color: black;
 }
 
-// .container {
-//   width: 100%;
-//   margin: 0 auto;
-//   padding-left: 20px;
-//   padding-right: 20px;
-
-//   // @include mobile {
-//   //   width: 320px;
-//   // }
-
-//   @media screen and (min-width: 480px) {
-//     width: 480px;
-//   }
-//   @include tablet {
-//     width: 768px;
-//   }
-//   @include desktop {
-//     max-width: 1280px;
-//   }
-// }
-
-////container fimoteca
-///
 .container {
   width: 100%;
   margin: 0 auto;
@@ -106,9 +83,6 @@ a {
   visibility: hidden;
   pointer-events: none;
 }
-////Button smooth scroll up
-///
-///
 .btn-up {
   display: none;
   position: fixed;
@@ -134,7 +108,7 @@ a {
   cursor: pointer;
   padding: 20px;
   border-radius: 10px;
-  background-image: url(../images/—Pngtree—cute\ cartoon\ movie\ popcorn_6113418.png);
+  background-image: url(../images/up-arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

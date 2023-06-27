@@ -10,12 +10,8 @@ import { spinnerPlay, spinnerStop } from './js/spinner';
 spinnerPlay();
 
 window.addEventListener('load', function (event) {
-  console.log('All resources finished loading!');
-
   spinnerStop();
 });
-
-// refs.btnLoadMore.classList.add('is-hidden');
 
 const pixaby = new pixabayAPI();
 
@@ -94,13 +90,11 @@ const handleSubmit = async event => {
     Notify.success(`Hooray! We found ${total} images.`);
 
     if (pixaby.isShowLoadMore) {
-      // refs.btnLoadMore.classList.remove('is-hidden');
       const target = document.querySelector('.gallery a:last-child');
       observer.observe(target);
     }
 
     modalGallery.refresh();
-    // scrollPage();
   } catch (error) {
     Notify.failure(error.message, 'Something went wrong!');
     clearPage();
@@ -151,7 +145,6 @@ function scrollPage() {
     behavior: 'smooth',
   });
 }
-///////Button smooth scroll up
 
 window.addEventListener('scroll', function (event) {
   scrollFunction();
