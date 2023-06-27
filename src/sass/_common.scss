@@ -85,6 +85,9 @@ a {
 }
 .btn-up {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -92,7 +95,6 @@ a {
   border: none;
   width: 100px;
   height: 100px;
-  color: red;
 }
 
 .btn-up-text {
@@ -112,9 +114,11 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 96px;
-  height: 79px;
+  width: 55px;
+  height: 55px;
+  transform: scale(1);
 }
 .btn-up:hover {
-  color: blue;
+  color: rgb(175, 7, 208);
+  transform: scale(1.2);
 }

@@ -152,7 +152,7 @@ window.addEventListener('scroll', function (event) {
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    refs.btnUpWrapper.style.display = 'block';
+    refs.btnUpWrapper.style.display = 'flex';
   } else {
     refs.btnUpWrapper.style.display = 'none';
   }
