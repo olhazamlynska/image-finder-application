@@ -95,9 +95,9 @@ To run the project, execute the following command:
 
 👤 **Olya Zamlynska**
 
-- Email: [olyazamlynska@gmail.com](mailto:olyazamlynska@gmail.com)
+- Email: [olhazamlynska@gmail.com](mailto:olhazamlynska@gmail.com)
 - GitHub: [@olhazamlynska](https://github.com/olhazamlynska)
-- Twitter: [@olyazamlynska](https://twitter.com/olyazamlynska)
+- Twitter: [@olhazamlynska](https://twitter.com/olhazamlynska)
 - LinkedIn: [OlhaZamlynska](https://www.linkedin.com/in/olhazamlynska)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
